@@ -1,5 +1,6 @@
 from threading import Thread
 import time, threading
+
 def printer(caractere, temps_att):
     for i in range(0, 10):
         print(caractere, flush = True, end='')
