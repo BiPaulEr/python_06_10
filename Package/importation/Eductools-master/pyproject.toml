@@ -1,0 +1,26 @@
+[project]
+name = "eductools"
+version = "0.1.0"
+description = "non"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.1.3,<3.0.0)",
+    "click (>=8.1.7,<9.0.0)"
+]
+
+[tool.poetry.scripts] 
+math = "eductools_cli.math_tools_cli:calcul_cli"
+
+[tool.poetry.group.test]
+optional = true
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
